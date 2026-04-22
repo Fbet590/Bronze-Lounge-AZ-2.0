@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { QuizForm } from "@/components/quiz-form";
+import { OffersAccordion } from "@/components/offers-accordion";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 md:pt-24 pb-32 md:pb-40">
+    <section className="relative min-h-screen flex items-center pt-20 md:pt-24 pb-48 md:pb-56">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -29,29 +30,17 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl text-background/90 max-w-xl mb-8 leading-relaxed">
             Your skin tone is one of a kind. Your tan should be too.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col gap-6 max-w-sm">
             <Button
               asChild
               size="lg"
-              className="bg-background text-foreground hover:bg-background/90 text-base px-8 sm:inline-flex"
+              className="bg-background text-foreground hover:bg-background/90 text-base px-8"
             >
-              <Link href="#book" className="md:hidden">Book Your Tan</Link>
+              <Link href="#book">Book Your Tan</Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              className="bg-background text-foreground hover:bg-background/90 text-base px-8 hidden md:inline-flex"
-            >
-              <Link href="#book">Book Your Spray Tan</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-background text-background hover:bg-background/10 text-base px-8 hidden sm:inline-flex"
-            >
-              <Link href="#services">Explore Services</Link>
-            </Button>
+            
+            {/* Offers Accordion */}
+            <OffersAccordion />
           </div>
         </div>
       </div>
