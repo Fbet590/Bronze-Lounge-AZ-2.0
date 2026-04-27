@@ -20,53 +20,30 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    question: "Which option interests you the most? 😊",
+    question: "Which option interests you the most?",
     type: "options",
     options: [
-      { label: "Bestie Bundle 👯‍♀️", value: "bestie-bundle" },
-      { label: "Glow Delivered 💫", value: "glow-delivered" },
-      { label: "Glow Pass 🎓 For students", value: "glow-pass" },
+      { label: "Bestie Bundle", value: "bestie-bundle" },
+      { label: "Glow Delivered", value: "glow-delivered" },
+      { label: "Glow Pass (For students)", value: "glow-pass" },
     ],
   },
   {
     id: 2,
-    question: "What's the occasion?",
-    type: "options",
-    options: [
-      { label: "Too Busy to Come In 🏃‍♀️", value: "busy" },
-      { label: "Vacation ✈️", value: "vacation" },
-      { label: "Wedding/Bachelorette 💍", value: "wedding" },
-      { label: "Just for fun 💁‍♀️", value: "fun" },
-      { label: "Birthday 🎂", value: "birthday" },
-    ],
-  },
-  {
-    id: 3,
-    question: "What's your ideal shade? 💫",
-    type: "options",
-    options: [
-      { label: "Sun-Kissed 🌅", value: "sun-kissed" },
-      { label: "Glowing Bronze 🤎", value: "bronze" },
-      { label: "Deep & Dark 🌙", value: "deep" },
-      { label: "Not sure — help me pick! 💫", value: "help" },
-    ],
-  },
-  {
-    id: 4,
     question: "How can we get in touch with you?",
     type: "text",
     placeholder: "Your full name",
     inputType: "text",
   },
   {
-    id: 5,
+    id: 3,
     question: "What's your email address?",
     type: "text",
     placeholder: "your@email.com",
     inputType: "email",
   },
   {
-    id: 6,
+    id: 4,
     question: "What's your phone number?",
     type: "text",
     placeholder: "(480) 555-1234",
@@ -151,7 +128,7 @@ export function QuizForm() {
           Perfect! We&apos;ve Got Your Glow Goals
         </h3>
         <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-          Thanks for sharing, {answers[4] ? answers[4].split(" ")[0] : "beautiful"}! We&apos;ll be in touch soon to help you get your perfect glow.
+          Thanks for sharing, {answers[2] ? answers[2].split(" ")[0] : "beautiful"}! We&apos;ll be in touch soon to help you get your perfect glow.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
